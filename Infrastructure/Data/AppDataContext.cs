@@ -7,7 +7,7 @@ namespace Filmes.Infrastructure.Data;
 public class AppDataContext : DbContext {
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        options.UseSqlite("Data Source=FILMEDATA.db");
+        options.UseSqlite("Data Source=../Infrastructure/Data/FILMEDATA.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
