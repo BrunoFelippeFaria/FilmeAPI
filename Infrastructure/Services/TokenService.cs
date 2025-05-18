@@ -11,7 +11,7 @@ namespace Filmes.Infrastructure.Services;
 
 public class TokenService : ITokenService
 {
-    private SymmetricSecurityKey _key = new (Encoding.UTF8.GetBytes("WJEt?c28=8m:"));
+    private SymmetricSecurityKey _key = new (Encoding.UTF8.GetBytes("minha-chave-muito-segura-de-32bytes!"));
 
     public string GerarToken(Usuarios usuarioDto)
     {
