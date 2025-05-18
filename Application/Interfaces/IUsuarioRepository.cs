@@ -1,3 +1,5 @@
+namespace Filmes.Application.Interfaces;
+
 using Filmes.Domain.Entities;
 
 public interface IUsuarioRepository {

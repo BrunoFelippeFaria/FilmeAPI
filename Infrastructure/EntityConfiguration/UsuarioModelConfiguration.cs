@@ -23,6 +23,9 @@ public class UsuarioModelConfiguration : IEntityTypeConfiguration<UsuariosModel>
         
         builder.Property(x => x.Hash)
             .HasColumnName("USE_HASH");
+
+        builder.Property(x => x.Salt)
+            .HasColumnName("USE_SALT");
         
         builder.Property(x => x.DataCadastro)
             .HasColumnName("SYS_DATCAD");
