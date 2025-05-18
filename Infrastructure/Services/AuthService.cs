@@ -24,8 +24,6 @@ public class AuthService(AppDataContext context, IMapper mapper) : IAuthService
 
         usuario.Hash = Convert.ToBase64String(hash);
         usuario.Salt = Convert.ToBase64String(salt);
-
-        _context.Usuarios.Update(_mapper.Map<UsuariosModel>(usuario));
     }
 
     public bool VerificarHash(string senha, string salt, string hash)

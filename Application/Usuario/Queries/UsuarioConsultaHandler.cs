@@ -1,5 +1,6 @@
 using AutoMapper;
 using Filmes.Application.Dtos;
+using Filmes.Application.Interfaces;
 using MediatR;
 
 namespace Filmes.Application.Usuario;

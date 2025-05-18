@@ -10,7 +10,8 @@ namespace Filmes.API.Controllers;
 [ApiController]
 [Route("/api/auth/")]
 
-public class AuthController(IMediator mediator)  : ControllerBase {
+public class AuthController(IMediator mediator) : ControllerBase
+{
     private readonly IMediator _mediator = mediator;
 
     [HttpPost("Login")]
@@ -23,4 +24,13 @@ public class AuthController(IMediator mediator)  : ControllerBase {
             : Ok(response);
     }
 
+    [HttpPost("Registrar")]
+    public async Task<IActionResult> Registrar([FromBody] UsuarioRegistrarDto usuarioDto)
+    {
+        var result = await _mediator.Send(new RegistrarCommand(usuarioDto));
+
+        return result == null
+            ? BadRequest("sa")
+            : Ok();
+    }
 }
