@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Filmes.API.Controllers;
 
-[Route("/api/usuario")]
+[Route("/api/usuarios")]
 [ApiController]
 
 public class UsuarioController(IMediator mediator) : ControllerBase {

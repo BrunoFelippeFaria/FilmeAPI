@@ -1,6 +1,6 @@
-namespace Filmes.Infrastructure.Models;
+namespace Filmes.Domain.Entities;
 
-public class FilmeSeriesModel
+public class FilmeSeries
 {
     public int Id { get; set; }
     public required string Titulo { get; set; }

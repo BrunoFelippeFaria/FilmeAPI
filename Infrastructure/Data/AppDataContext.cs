@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Filmes.Infrastructure.Data;
 
-public class AppDataContext : DbContext {
+public class AppDataContext : DbContext
+{
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
         options.UseSqlite("Data Source=../Infrastructure/Data/FILMEDATA.db");
@@ -15,5 +16,6 @@ public class AppDataContext : DbContext {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(UsuarioModelConfiguration).Assembly);
     }
 
-    public required DbSet<UsuariosModel> Usuarios {get; set;}
+    public required DbSet<UsuariosModel> Usuarios { get; set; }
+    public required DbSet<FilmeSeriesModel> FilmeSeries { get; set; }
 }

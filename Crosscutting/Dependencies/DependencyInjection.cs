@@ -14,6 +14,7 @@ public static class DependencyInjection {
         services.AddScoped<IUsuarioRepository, UsuarioRepository>();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IFilmesSeriesRepository, FilmesSeriesRepository>();
 
         //AutoMapper
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

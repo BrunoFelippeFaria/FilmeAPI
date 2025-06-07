@@ -6,7 +6,6 @@ namespace Filmes.Infrastructure.Mapping;
 
 public class UsuarioProfile : Profile {
     public UsuarioProfile () {
-        CreateMap<UsuariosModel, Usuarios>();
-        CreateMap<Usuarios, UsuariosModel>();
+        CreateMap<UsuariosModel, Usuarios>().ReverseMap();
     }
 }
